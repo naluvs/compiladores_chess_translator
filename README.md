@@ -6,9 +6,17 @@ Este projeto implementa um tradutor de notação de xadrez para português (PT-B
 
 ## Requisitos
 
-- MSYS2
 - Flex
 - Bison
 - GCC
+- Linux
 
-### Passos
+## Compilar
+
+1. bison -d chess.y
+2. flex chess.l
+3. gcc -o chess_translator chess.tab.c lex.yy.c main.c -lfl
+
+## Executar
+
+./chess_translator
